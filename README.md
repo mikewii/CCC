@@ -2,13 +2,13 @@
 - Compile .c .cpp .s source
 - link it to .elf ARM binary image
 - extract all the linked code
-- and format it to out.txt in AR cheat code form: \
+- and format it to out.txt in AR cheat code form:
 
 [name] \
 XXXXXXXX YYYYYYYY \
 where: \
 XXXXXXXX - offset \
-YYYYYYYY - ARM instruction, or value, in little endian \
+YYYYYYYY - ARM instruction, or value, in little endian
 
 It really shows it potential if used in assotiation with IDA and python scripts:
 it allow you to write compiled AR code ritgh in memory of debugging process,
@@ -23,4 +23,4 @@ There is 2 ways you can use it:
 Made possible with help from, in no particular order: \
 @luigoalma \
 @Rafa10 \
-@piepie62 \
+@piepie62
