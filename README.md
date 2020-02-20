@@ -15,7 +15,10 @@ it allow you to write compiled AR code ritgh in memory of debugging process,
 to test it out imidiately.
 
 ## How to use:
-There is 2 ways you can use it:
+Prerequirements: DevkitARM must be installed in your environment
+Simply run make after setup.
+
+There is 2 ways you can setup it:
 - see SECTIONS in linker.ld and change .jump for entry offset, edit jump.s to change dst
 - ignore jump completely and set ENTRY to fun, or any other function
 
