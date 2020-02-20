@@ -1,0 +1,7 @@
+00150000 T jump
+00320000 00000034 T fun
+00320034 00000080 T checkMemory
+003200b4 T svcOpenProcess
+003200c8 T svcGetProcessId
+003200dc T svcControlProcessMemory
+003200f4 T svcQueryProcessMemory
