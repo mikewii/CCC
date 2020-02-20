@@ -105,12 +105,12 @@ all: $(BUILD)
 $(BUILD):
 	@[ -d $@ ] || mkdir -p $@
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
-	@python $(TOPDIR)/format.py $(TOPDIR)/dump.txt
+	@python $(TOPDIR)/py_scripts/format.py $(TOPDIR)/$(BUILD)/dump.txt
 
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
-	@rm -fr $(BUILD) $(TARGET).cxi $(TARGET).elf
+	@rm -fr $(BUILD) $(TARGET).cxi $(TARGET).elf out.txt
 
 
 #---------------------------------------------------------------------------------
@@ -131,7 +131,7 @@ $(OUTPUT).elfe	:	$(OFILES)
 	@$(LD) $(LDFLAGS) $(OFILES) $(LIBPATHS) $(LIBS) -o $@
 	@$(NM) -CSn $@ > $(notdir $*.lst)
 	@mv $(OUTPUT).elfe $(OUTPUT).elf
-	@$(OBJDUMP) $(OBJDUMP_FLAGS) $(OUTPUT).elf > $(TOPDIR)/dump.txt
+	@$(OBJDUMP) $(OBJDUMP_FLAGS) $(OUTPUT).elf > $(TOPDIR)/$(BUILD)/dump.txt
 	
 
 $(OFILES_SRC)	: $(HFILES_BIN)
