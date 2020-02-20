@@ -12,3 +12,9 @@ to test it out imidiately.
 There is 2 ways you can use it:
 - see SECTIONS in linker.ld and change .jump for entry offset, edit jump.s to change dst
 - ignore jump completely and set ENTRY to fun, or any other function
+
+### Credits:
+Made possible with help from:
+@luigoalma
+@Rafa10
+@piepie62
