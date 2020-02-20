@@ -15,7 +15,7 @@ it allow you to write compiled AR code ritgh in memory of debugging process,
 to test it out imidiately.
 
 ## How to use:
-Prerequirements: DevkitARM must be installed in your environment
+Prerequirements: DevkitARM must be installed in your environment \
 Simply run make after setup.
 
 There is 2 ways you can setup it:
