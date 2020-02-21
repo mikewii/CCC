@@ -102,10 +102,17 @@ export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
 #---------------------------------------------------------------------------------
 all: $(BUILD)
 
+E:
+	@[ -d $(BUILD) ] || mkdir -p $(BUILD)
+	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
+	@python $(TOPDIR)/py_scripts/format.py $(TOPDIR)/$(BUILD)/dump.txt E
+
+0: $(BUILD)
+
 $(BUILD):
 	@[ -d $@ ] || mkdir -p $@
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
-	@python $(TOPDIR)/py_scripts/format.py $(TOPDIR)/$(BUILD)/dump.txt
+	@python $(TOPDIR)/py_scripts/format.py $(TOPDIR)/$@/dump.txt 0
 
 #---------------------------------------------------------------------------------
 clean:
