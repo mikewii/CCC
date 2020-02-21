@@ -1,4 +1,4 @@
-# CCC meant to:
+# CCC is meant to:
 - Compile .c .cpp .s source
 - link it to .elf ARM binary image
 - extract all the linked code
